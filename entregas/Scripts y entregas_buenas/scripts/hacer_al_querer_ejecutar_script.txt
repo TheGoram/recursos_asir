@@ -1,0 +1,7 @@
+sudo mkdir -p /mnt/usb
+sudo mount /dev/disco_pen /mnt/usb
+
+cp /mnt/usb/script.sh ~/
+chmod +x script.sh
+
+sudo umount /mnt/usb

@@ -1,0 +1,95 @@
+9.1. Documentación Oficial de Sistemas y Servicios Core
+
+    Canonical Ltd. (2024). Ubuntu Server Official Documentation (Networking, Netplan & UFW). Recuperado de: https://ubuntu.com/server/docs
+
+    Samba Team. (2024). Setting up Samba as an Active Directory Domain Controller. SambaWiki. Recuperado de: https://wiki.samba.org/index.php/Setting_up_Samba_as_an_Active_Directory_Domain_Controller
+
+    Samba Team. (2024). DNS Administration in Samba Active Directory (Gestión de registros y zonas DNS mediante samba-tool). SambaWiki. Recuperado de: https://wiki.samba.org/index.php/DNS_Administration
+
+    Samba Team / Linux man-pages. (2024). wbinfo(1) - Query information from winbind daemon (Resolución de SIDs e identidades en Samba AD). Recuperado de: https://www.samba.org/samba/docs/current/man-html/wbinfo.1.html
+
+    Internet Systems Consortium (ISC). (2024). DHCP 4.4 Manual Pages (dhcpd.conf y arquitectura Failover). Recuperado de: https://kb.isc.org/docs/isc-dhcp-44-manual-pages
+
+    The Apache Software Foundation. (2024). Apache HTTP Server Version 2.4 Documentation (Módulos mod_rewrite y mod_ssl). Recuperado de: https://httpd.apache.org/docs/2.4/
+
+    MariaDB Foundation. (2024). MariaDB Server Documentation. Recuperado de: https://mariadb.com/kb/en/documentation/
+
+    Netfilter Core Team. (2024). iptables(8) - Linux man page (Configuración de NAT y Firewall). Recuperado de: https://linux.die.net/man/8/iptables
+
+    Oracle Corporation. (2024). Oracle VM VirtualBox User Manual (Configuración de redes Host-Only y NAT). Recuperado de: https://www.virtualbox.org/manual/
+
+    Microsoft Corporation. (2024). Active Directory communication failures on multihomed domain controllers (Comportamiento de AD en servidores con múltiples interfaces de red). Microsoft Learn. Recuperado de: https://learn.microsoft.com/en-us/troubleshoot/windows-server/identity/communication-fails-on-multihomed-dc
+
+    Microsoft Corporation. (2024). Troubleshooting DNS Server: Check for DNS records associated with the wrong network interface. Microsoft Learn. Recuperado de: https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/troubleshoot-dns-server
+
+    Linux Kernel Organization. (2024). VirtualBox Guest Integration (vboxguest / vboxsf) in mainline kernel. Kernel.org Documentation. Recuperado de: https://docs.kernel.org/
+
+    Microsoft. (2024). Windows Commands - explorer (Opciones de línea de comandos del explorador de archivos). Microsoft Learn. Recuperado de: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/explorer
+
+GNOME Project. (2024). GIO - GNOME Input/Output and Gvfs (Gestión de metadatos e iconos en entornos Linux). GNOME Developer Documentation. Recuperado de: https://docs.gtk.org/gio/index.html
+9.2. Integración de Clientes, Scripting y Automatización
+
+    Free Software Foundation. (2024). GNU Bash Reference Manual. Recuperado de: https://www.gnu.org/software/bash/manual/
+
+    Free Software Foundation. (2024). GNU Awk User's Guide (Filtrado y procesamiento de cadenas de texto en Bash para resolución Zero-Touch). Recuperado de: https://www.gnu.org/software/gawk/manual/gawk.html
+
+    Debian Project. (2024). debconf(1) - Linux man page (Non-interactive package configuration). Recuperado de: https://manpages.debian.org/testing/debconf-doc/debconf.1.en.html
+
+    Linux man-pages. (2024). ip-address(8) - Protocol address management (Extracción dinámica de direcciones IP para scripts de automatización). Recuperado de: https://man7.org/linux/man-pages/man8/ip-address.8.html
+
+    Linux man-pages. (2024). pam_mount.conf(5) - Pluggable Authentication Module for mounting volumes. Recuperado de: https://linux.die.net/man/5/pam_mount.conf
+
+    GNOME Project. (2024). GNOME System Administration Guide: Configuring desktop settings (dconf and gsettings). Recuperado de: https://help.gnome.org/admin/system-admin-guide/stable/
+
+    Microsoft Corporation. (2024). Add-Computer cmdlet (Microsoft.PowerShell.Management). Microsoft Learn. Recuperado de: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/add-computer
+
+    Microsoft Corporation. (2024). Set-Content cmdlet - Encoding parameter (ASCII vs UTF8 BOM). Microsoft Learn. Recuperado de: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/set-content
+
+    Microsoft Corporation. (2024). Write-Progress cmdlet (Microsoft.PowerShell.Utility). Microsoft Learn. Recuperado de: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/write-progress
+
+    Microsoft Corporation. (2024). Get-Volume cmdlet (Storage) (Detección dinámica de unidades de hardware en PowerShell). Microsoft Learn. Recuperado de: https://learn.microsoft.com/en-us/powershell/module/storage/get-volume
+
+    Zorin Group. (2024). Zorin OS Help & Support (Active Directory Integration). Recuperado de: https://help.zorin.com/
+
+    System Security Services Daemon (SSSD). (2024). SSSD Documentation (Kerberos & Active Directory integration). Recuperado de: https://sssd.io/docs/introduction.html
+
+    Telegram Messenger Inc. (2024). Telegram Bot API (Push Notifications via cURL). Recuperado de: https://core.telegram.org/bots/api
+    Microsoft. (2024). Invoke-WebRequest (Microsoft.PowerShell.Utility) - Descarga de recursos externos y gestión de protocolos de seguridad TLS. PowerShell Documentation. Recuperado de: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest
+
+Ubuntu Manpages. (2024). pam_mount.conf - Description of the pam_mount configuration file (Configuración de volúmenes de red dinámicos). Recuperado de: https://manpages.ubuntu.com/manpages/noble/man5/pam_mount.conf.5.html
+
+GitHub Docs. (2024). Working with raw content URLs (Automatización de despliegue de activos mediante repositorios públicos). Recuperado de: https://docs.github.com/en/repositories/working-with-files/using-files/getting-a-permanent-link-to-a-file
+
+9.3. Ciberseguridad y Mejoras Futuras
+
+    Wazuh, Inc. (2024). Wazuh Documentation: Open Source XDR and SIEM. Recuperado de: https://documentation.wazuh.com/
+
+    Instituto Nacional de Ciberseguridad (INCIBE). (2024). Guías de ciberseguridad para PYMEs: Políticas de Defensa en Profundidad y Disaster Recovery. Recuperado de: https://www.incibe.es/protege-tu-empresa
+
+    NIST (National Institute of Standards and Technology). (2024). Cybersecurity Framework (CSF 2.0). Recuperado de: https://www.nist.gov/cyberframework
+
+    OWASP Foundation. (2024). OWASP Top 10 Web Application Security Risks (Bastionado de Intranet LAMP). Recuperado de: https://owasp.org/www-project-top-ten/
+
+    Microsoft Corporation. (2024). Interactive logon: Don't display last signed-in (Bastionado del registro de Windows y prevención de fuga de identidades). Microsoft Learn. Recuperado de: https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/interactive-logon-dont-display-last-signed-in
+
+    GNOME Project. (2024). Hide the user list in the login screen (Bastionado de GDM3 y privacidad en clientes Linux). GNOME System Administration Guide. Recuperado de: https://help.gnome.org/admin/system-admin-guide/stable/login-userlist-disable.html.en
+
+9.4. Normativa Legal y Referencias Económicas
+
+    Boletín Oficial del Estado (BOE). (2025). Resolución de 4 de abril de 2025, de la Dirección General de Trabajo, por la que se registra y publica el XIX Convenio colectivo estatal de empresas de consultoría, tecnologías de la información y estudios de mercado y de la opinión pública (BOE-A-2025-7766). Recuperado de: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-7766
+
+    Jefatura del Estado (BOE). (2018). Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD). Recuperado de: https://www.boe.es/eli/es/lo/2018/12/05/3/con
+
+9.5. Trabajos Académicos y Proyectos de Referencia
+
+    Del Pino, A. (2022). Diseño y despliegue de una infraestructura de clúster que ofrece un servicio web basado en Apache en alta disponibilidad. Trabajo de Fin de Grado. Universidad de Las Palmas de Gran Canaria (Repositorio accedaCRIS). Recuperado de: https://accedacris.ulpgc.es/bitstream/10553/118014/1/P%C3%A1ginas%20desdeEII-%5BGII%5D-2022-07-DelPino_Ariadna.pdf
+
+    Yáñez, A. (2021). Windows Domain Services: Integración de Active Directory y Servicios DHCP. Documentación de Grado. Universidad de A Coruña (UDC). Recuperado de: https://www.dc.fi.udc.es/~afyanez/Docencia/2021/Grado/Trabajos/DominiosWindows-CTP.pdf
+
+    Junta de Andalucía. (2023). Servicio de diseño e implantación del Directorio Activo Corporativo (Integración Samba y Microsoft Active Directory). Memoria técnica (CONTR 2023 66551). Consejería de Economía, Hacienda y Fondos Europeos. Recuperado de: https://www.juntadeandalucia.es/haciendayadministracionpublica/apl/pdc_sirec_documentacion/rest/descargar/documento/210156
+
+    Instituto Nacional de Tecnologías Educativas y de Formación del Profesorado (INTEF). (2019). Redes corporativas: Servidores NFS, Samba, DHCP y Alta Disponibilidad. Ministerio de Educación y Formación Profesional. Recuperado de:
+
+        Samba y AD: https://formacion.intef.es/tutorizados_2013_2019/mod/resource/view.php?id=18861
+
+        DHCP y Concesiones: https://formacion.intef.es/tutorizados_2013_2019/mod/resource/view.php?id=18847

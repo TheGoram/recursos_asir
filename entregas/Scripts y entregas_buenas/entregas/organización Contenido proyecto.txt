@@ -1,0 +1,143 @@
+TITULO 1 - [TEMA]
+TITULO 2 - [CAPITULO]
+TITULO 3 - [APARTADO]
+TITULO 4 - [SUBAPARTADO]
+
+
+
+Estructura Propuesta para el Proyecto Final
+
+    Portada y Preliminares
+
+        Portada: Datos del IES, título y autor.
+
+        Resumen / Abstract: Utiliza la versión final que redactamos para la Cuarta Entrega (que ya aparece integrada en tu plantilla).
+
+        Índices: Índice de contenidos, de ilustraciones y de tablas.
+
+    Capítulo 1: Introducción y Escenario (Contenido de la Primera Entrega)
+
+        Descripción del escenario: Necesidad de la PYME y objetivos.
+
+        Arquitectura propuesta: Explicación del modelo de Alta Disponibilidad.
+
+        Listado de servidores y roles: Descripción de SRV-PDC, SRV-SDC y clientes.
+
+    Capítulo 2: Diseño de Red (Contenido de la Primera Entrega - Versión Corregida)
+
+        Diseño de red: Incluye aquí el esquema de subredes segmentadas (.10 para Linux y .20 para Windows)
+ y el diagrama de red.
+
+    Capítulo 3: Instalación y Configuración Base (Contenido de la Segunda Entrega)
+
+        Instalación de máquinas virtuales: Detalles del hipervisor y sistemas operativos.
+
+        Configuración de red y enrutamiento: Archivos Netplan y configuración de la NAT.
+
+        Pruebas de conectividad iniciales: Verificación de salida a internet y comunicación entre nodos.
+
+    Capítulo 4: Despliegue de Servicios y Automatización (Contenido de la Tercera Entrega)
+
+        Servicios de infraestructura: Configuración de DNS y DHCP Failover.
+
+        Active Directory y Archivos: Implementación de Samba 4 y recursos compartidos.
+
+        Intranet Corporativa: Despliegue de la pila LAMP y portal web.
+
+        Automatización Zero-Touch: Explicación de la lógica de tus scripts (provisión, usuarios, monitorización
+ con Telegram) e importancia de la idempotencia.
+
+    Capítulo 5: Seguridad y Auditoría (Contenido de la Quinta Entrega)
+
+        Defensa en Profundidad: Capas de seguridad perimetral, IAM, RBAC y Hardening (HTTPS).
+
+        Políticas de seguridad: Directivas de contraseñas y permisos avanzados (Sticky Bit).
+
+        Estrategia de Disaster Recovery: Plan de copias de seguridad automatizadas.
+
+    Capítulo 6: Plan de Pruebas y Validación (Contenido de la Quinta Entrega)
+
+        Batería de Pruebas: Los 9 escenarios de prueba que validan el funcionamiento real de todo el sistema 
+(desde el fallo del PDC hasta la trazabilidad de logs).
+
+    Capítulo 7: Análisis Económico (Contenido de la Cuarta Entrega)
+
+        Presupuesto: Gastos de hardware/software e ingresos por servicios técnicos.
+
+        Rentabilidad: Análisis de beneficio neto y justificación del ahorro para el cliente.
+
+    Capítulo 8: Problemas y Conclusiones (Contenido de la Quinta Entrega)
+
+        Problemas encontrados y soluciones: Apartado de Troubleshooting (Kerberos, VBScript, etc.).
+
+        Conclusiones finales: Cumplimiento de objetivos.
+
+        Mejoras futuras: Hoja de ruta incluyendo MFA, backups en la nube y la integración de Wazuh.
+
+    Capitulo 9: Bibliografia y webgrafia
+	Para el diseño, despliegue, automatización y justificación económica de la presente infraestructura, se ha consultado la documentación oficial de los fabricantes y desarrolladores del software, así como normativas legales estatales y guías de ciberseguridad:
+	5.1. Documentación Oficial de Sistemas y Servicios Core
+
+	    Canonical Ltd. (2024). Ubuntu Server Official Documentation (Networking, Netplan & UFW). Recuperado de: https://ubuntu.com/server/docs
+
+	    Samba Team. (2024). Setting up Samba as an Active Directory Domain Controller. SambaWiki. Recuperado de: https://wiki.samba.org/index.php/Setting_up_Samba_as_an_Active_Directory_Domain_Controller
+
+	    Internet Systems Consortium (ISC). (2024). DHCP 4.4 Manual Pages (dhcpd.conf y arquitectura Failover). Recuperado de: https://kb.isc.org/docs/isc-dhcp-44-manual-pages
+
+	    The Apache Software Foundation. (2024). Apache HTTP Server Version 2.4 Documentation (Módulos mod_rewrite y mod_ssl). Recuperado de: https://httpd.apache.org/docs/2.4/
+
+	    MariaDB Foundation. (2024). MariaDB Server Documentation. Recuperado de: https://mariadb.com/kb/en/documentation/
+
+	5.2. Integración de Clientes, Scripting y Automatización
+
+	    Microsoft Corporation. (2024). Add-Computer cmdlet (Microsoft.PowerShell.Management). Microsoft Learn. Recuperado de: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/add-computer
+
+	    Zorin Group. (2024). Zorin OS Help & Support (Active Directory Integration). Recuperado de: https://help.zorin.com/
+
+	    Telegram Messenger Inc. (2024). Telegram Bot API (Push Notifications via cURL). Recuperado de: https://core.telegram.org/bots/api
+
+	    Linux man-pages. (2024). pam_mount.conf(5) - Pluggable Authentication Module for mounting volumes. Recuperado de: https://linux.die.net/man/5/pam_mount.conf
+
+	5.3. Ciberseguridad y Mejoras Futuras
+
+	    Wazuh, Inc. (2024). Wazuh Documentation: Open Source XDR and SIEM. Recuperado de: https://documentation.wazuh.com/
+
+	    Instituto Nacional de Ciberseguridad (INCIBE). (2024). Guías de ciberseguridad para PYMEs: Políticas de Defensa en Profundidad y Disaster Recovery. Recuperado de: https://www.incibe.es/protege-tu-empresa
+
+	5.4. Normativa Legal y Referencias Económicas
+
+	    Boletín Oficial del Estado (BOE). (2025). Resolución de 4 de abril de 2025, de la Dirección General de Trabajo, por la que se registra y publica el XIX Convenio colectivo estatal de empresas de consultoría, tecnologías de la información y estudios de mercado y de la opinión pública (BOE-A-2025-7766). Recuperado de: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-7766
+	5.5. Trabajos academicos y proyectos de referencia
+	    Del Pino, A. (2022). Diseño y despliegue de una infraestructura de clúster que ofrece un servicio web basado en Apache en alta disponibilidad. Trabajo de Fin de Grado. Universidad de Las Palmas de Gran Canaria (Repositorio accedaCRIS). Recuperado de: https://accedacris.ulpgc.es/bitstream/10553/118014/1/P%C3%A1ginas%20desdeEII-%5BGII%5D-2022-07-DelPino_Ariadna.pdf
+
+Yáñez, A. (2021). Windows Domain Services: Integración de Active Directory y Servicios DHCP. Documentación de Grado. Universidad de A Coruña (UDC). Recuperado de: https://www.dc.fi.udc.es/~afyanez/Docencia/2021/Grado/Trabajos/DominiosWindows-CTP.pdf
+
+Junta de Andalucía. (2023). Servicio de diseño e implantación del Directorio Activo Corporativo (Integración Samba y Microsoft Active Directory). Memoria técnica (CONTR 2023 66551). Consejería de Economía, Hacienda y Fondos Europeos. Recuperado de: https://www.juntadeandalucia.es/haciendayadministracionpublica/apl/pdc_sirec_documentacion/rest/descargar/documento/210156
+
+Instituto Nacional de Tecnologías Educativas y de Formación del Profesorado (INTEF). (2019). Redes corporativas: Servidores NFS, Samba, DHCP y Alta Disponibilidad. Ministerio de Educación y Formación Profesional. Recuperado de:
+
+    Samba y AD: https://formacion.intef.es/tutorizados_2013_2019/mod/resource/view.php?id=18861
+
+    DHCP y Concesiones: https://formacion.intef.es/tutorizados_2013_2019/mod/resource/view.php?id=18847
+
+    Anexos
+
+        Código Fuente: Pega aquí el código completo de tus 4 scripts finales debidamente etiquetados.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5. Bibliografía y Webgrafía
+

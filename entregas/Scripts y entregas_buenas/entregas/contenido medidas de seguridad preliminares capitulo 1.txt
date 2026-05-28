@@ -1,0 +1,27 @@
+Implementación de arquitectura de Defensa en Profundidad: El diseño se fundamenta en un modelo de capas concéntricas 
+donde la seguridad no depende de un único control. Mediante la superposición de barreras (firewall, segmentación, 
+permisos y cifrado), se garantiza que la vulneración de un elemento individual sea contenida por capas adicionales, 
+protegiendo los activos críticos de la organización.
+
+
+
+Centralización de identidades mediante RBAC: Gestión unificada de usuarios y recursos mediante un Directorio Activo 
+(Samba 4). Se aplica un Control de Acceso Basado en Roles (RBAC) mediante grupos departamentales (Dirección, Ventas, 
+Técnicos) y Listas de Control de Acceso (ACLs) granulares. Este control se refuerza con permisos avanzados como 
+el Sticky Bit para salvaguardar la integridad de los datos en áreas de intercambio común.
+
+
+
+
+Garantía de disponibilidad mediante sistemas de Failover y Backup online: Eliminación de puntos únicos de fallo 
+(SPOF) a través de mecanismos de Alta Disponibilidad. Esto incluye la redundancia de servicios críticos mediante 
+DHCP Failover y una estrategia de Disaster Recovery basada en respaldos automatizados y "online", que permiten 
+asegurar la persistencia de la base de datos LDAP sin interrumpir la operatividad del servicio de directorio.
+
+
+
+
+Bastionado de servicios y cifrado de comunicaciones: Aplicación de técnicas de Hardening para reducir la 
+superficie de exposición, incluyendo el aislamiento de interfaces de red, el uso de firewalls perimetrales 
+(iptables) y la desactivación de servicios innecesarios en los servidores. Asimismo, se garantiza la privacidad 
+de la información en tránsito mediante el uso de protocolos cifrados (HTTPS) para el acceso a la intranet corporativa.

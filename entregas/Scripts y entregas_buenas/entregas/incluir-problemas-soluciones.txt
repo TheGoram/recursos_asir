@@ -1,0 +1,39 @@
+Exposición de servicios críticos de Active Directory a redes no confiables (WAN)
+
+    Problema: Por diseño, el demonio de Samba 4 escucha peticiones en todas las interfaces de red físicas y virtuales de la máquina. Al ser el PDC un router con una pata en Internet (NAT), 
+esto suponía un riesgo crítico de seguridad al exponer los puertos de LDAP, DNS y RPC al exterior.
+
+    Solucion: Se aplicó una técnica de bastionado (Hardening) de servicios. El script inyecta la directiva bind interfaces only = yes en el archivo smb.conf, especificando explícitamente que 
+Samba solo atienda y procese peticiones provenientes de la interfaz de bucle local (lo) y de las dos redes internas seguras (LAN Windows y LAN Linux).
+
+Consumo excesivo de recursos por entornos gráficos en los Controladores de Dominio
+
+    Problema: Mantener el entorno gráfico (XFCE4) cargado y corriendo permanentemente en la memoria de los dos servidores (PDC y SDC) consumía una cantidad de RAM y CPU innecesaria, restando 
+rendimiento a la base de datos del Active Directory y a las reglas de enrutamiento.
+
+    Solucion: Se modificó el  del sistema operativo ejecutando el comando systemctl set-default multi-user.target. De esta manera, los servidores arrancan siempre en modo consola pura 
+("modo ninja" de bajo consumo), y el entorno gráfico solo se carga bajo demanda, en segundo plano, cuando un administrador establece una conexión vía Escritorio Remoto (XRDP).
+
+Fallo en la creación de perfiles locales para usuarios del dominio en Linux
+
+    Problema: Al iniciar sesión en el cliente Zorin OS con un usuario válido del Active Directory, el sistema validaba correctamente la contraseña pero lanzaba un error al no existir 
+el directorio personal físico (/home/usuario), dejando al empleado sin entorno gráfico de trabajo funcional.
+
+    Solucion: En el script de clientes Linux se inyectó un archivo de configuración para habilitar el módulo pam_mkhomedir.so. Esto instruye al sistema operativo para que, en el instante 
+preciso del primer inicio de sesión de un usuario de red, construya automáticamente su árbol de directorios utilizando la plantilla predeterminada del sistema (/etc/skel).
+
+Carencia de privilegios administrativos locales para los Administradores de Dominio
+
+    Problema: Aunque un usuario (como DiegoJefe) perteneciera al grupo "Domain Admins" en el Active Directory, al iniciar sesión en un cliente Linux (Zorin OS) o en el propio servidor PDC, 
+el sistema operativo le denegaba la elevación de privilegios mediante sudo, limitando sus capacidades de mantenimiento técnico.
+
+    Solucion: Se implementó un mapeo dinámico de permisos RBAC (Role-Based Access Control). El script inyecta un archivo específico en el directorio /etc/sudoers.d/ que otorga permisos de 
+superusuario irrestrictos locales a todos los miembros del grupo de red %domain\ admins, uniendo así la autoridad de Active Directory con el control UNIX local.
+
+Aparición de alertas de seguridad Polkit al usar Escritorio Remoto (XRDP)
+
+    Problema: Al establecer la conexión por RDP hacia el servidor Ubuntu desde una máquina externa, el entorno gráfico lanzaba el mensaje bloqueante "Authentication is required to create a color managed device", 
+interrumpiendo la fluidez del uso del escritorio remoto.
+
+    Solucion: Se identificó este comportamiento no como un error, sino como una medida de seguridad nativa de Polkit en Linux para sesiones remotas. La solución operativa adoptada es descartar la alerta o 
+autenticar con el usuario administrador puramente local del SO base, impidiendo que políticas gráficas de hardware afecten a los administradores de red conectados en remoto.

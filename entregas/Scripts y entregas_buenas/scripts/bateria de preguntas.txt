@@ -1,0 +1,129 @@
+Arquitectura y diseño
+¿Por qué decidiste usar Samba 4 en lugar de Windows Server?
+¿Qué ventajas tiene tu solución frente a un Active Directory tradicional?
+¿Qué entiendes por arquitectura “Zero-Touch”?
+¿Por qué elegiste Ubuntu Server?
+¿Por qué separaste Linux y Windows en dos subredes distintas?
+¿Qué problema resuelve la segmentación?
+¿Qué ventajas aporta tener un PDC y un SDC?
+¿Qué ocurre si cae el servidor principal?
+¿Qué servicios siguen funcionando si el PDC falla?
+¿Por qué decidiste automatizar el despliegue?
+¿Qué ventajas tiene la automatización frente a la configuración manual?
+¿Qué significa que un script sea idempotente?
+
+Active Directory / Samba
+¿Qué es Samba 4?
+¿Cómo consigue Samba actuar como un Domain Controller?
+¿Qué es Kerberos?
+¿Qué es LDAP?
+¿Qué relación existe entre Kerberos y Active Directory?
+¿Por qué es importante sincronizar la hora?
+¿Qué ocurre si hay desfase horario?
+¿Qué es un Realm?
+¿Qué diferencia hay entre: dominio, realm, NetBIOS?
+
+Más técnicas
+¿Por qué usaste --use-rfc2307?
+¿Qué son los UID y GID en Linux?
+¿Por qué tuviste que traducir SID → UID/GID?
+¿Qué es Winbind?
+¿Qué es SSSD?
+¿Qué hace realm join?
+¿Qué problema tenías con .local y Avahi?
+¿Por qué desactivaste systemd-resolved?
+¿Qué significa bind interfaces only = yes?
+¿Qué problema daba la IP NAT en Samba DNS?
+¿Qué son los registros DNS A?
+¿Qué es DNS Round Robin?
+¿Qué diferencias hay entre Samba Internal DNS y Bind9_DLZ?
+
+DHCP y red
+¿Qué es DHCP Failover?
+¿Cómo funciona el balanceo “split 128”?
+¿Qué ocurre si un DHCP cae?
+¿Qué es MCLT?
+¿Qué diferencia hay entre: failover, balanceo, alta disponibilidad?
+
+
+Redes
+¿Qué hace Netplan?
+¿Por qué configuraste interfaces estáticas?
+¿Qué es NAT?
+¿Qué hace MASQUERADE?
+¿Qué es ip_forward?
+¿Qué diferencia hay entre WAN y LAN?
+¿Qué hace el firewall que implementaste?
+
+Seguridad
+¿Por qué pusiste política DROP por defecto?
+¿Qué ventajas tiene HTTPS?
+¿Qué diferencia hay entre HTTP y HTTPS?
+¿Qué es un certificado X.509?
+¿Por qué el certificado es autofirmado?
+¿Qué riesgos tiene usar contraseñas hardcodeadas?
+¿Qué mejorarías de seguridad en un entorno real?
+¿Qué es RBAC?
+¿Cómo controlas los permisos de usuarios?
+
+Preguntas para “pillarme”
+¿Tu firewall realmente filtra puertos o permite todo?
+¿Qué pasaría si un atacante entra en la red 192.168.10.0?
+¿Por qué usas root para casi todo?
+¿Qué riesgos tiene ejecutar cron como root?
+¿Qué harías para securizar más Telegram?
+
+Linux / PAM / SSSD
+¿Qué es PAM?
+¿Qué hace pam_mount?
+¿Qué hace pam_mkhomedir?
+¿Qué es NSS?
+¿Qué es /etc/nsswitch.conf?
+¿Qué problema resolvías eliminando mdns4_minimal?
+¿Qué es fallback_homedir?
+¿Qué significa use_fully_qualified_names = False?
+¿Por qué reinicias SSSD?
+¿Qué son las cachés de SSSD?
+
+File Server y permisos
+¿Qué permisos Linux aplicas a los departamentos?
+¿Qué hace el sticky bit?
+¿Por qué usaste chmod 1777?
+¿Qué diferencia hay entre permisos NTFS y permisos Linux?
+¿Cómo integraste permisos AD con Linux?
+¿Qué hace ACL?
+¿Qué ocurre si un usuario intenta borrar archivos de otro?
+
+RRHH / Automatización
+¿Cómo automatizas el alta de empleados?
+¿Qué ocurre internamente cuando creas un usuario?
+¿Cómo asignas grupos?
+¿Cómo creas automáticamente carpetas?
+¿Qué ventaja tiene obligar al cambio de contraseña?
+¿Cómo queda registrada la auditoría?
+¿Qué problema resuelve tu sistema RRHH?
+
+Intranet y PHP
+¿Por qué usaste PHP y MariaDB?
+¿Qué es una inyección SQL?
+¿Cómo la evitaste?
+¿Qué hace bind_param()?
+¿Cómo funciona la creación dinámica de portales?
+¿Qué es una base de datos relacional?
+¿Qué es una clave primaria?
+¿Qué hace AUTO_INCREMENT?
+¿Por qué limitas las consultas a 15 registros?
+
+Backups y monitorización
+¿Qué estrategia de backup implementaste?
+¿Qué diferencia hay entre backup online y offline?
+¿Qué ocurre si falla el backup?
+¿Por qué eliminabas backups >7 días?
+¿Qué ventajas tiene Telegram para monitorización?
+¿Cómo evitaste el spam de alertas?
+
+XRDP y acceso remoto
+¿Por qué usaste XRDP?
+¿Qué diferencia hay entre SSH y RDP?
+¿Qué ventajas tiene XFCE?
+¿Por qué arrancas el servidor en multi-user.target?
